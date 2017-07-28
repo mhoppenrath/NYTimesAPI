@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>New York Times Search></title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="nytimes.css"> -->
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row header">
+	<div class="text-center">
+		<div class="col-lg-1"></div>
+
+			<div class="col-lg-8">
+				<div class="page-header">
+					<h1>New York Times Search</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="row">
+			<div class="col-lg-1"></div>
+				<div class="col-lg-8">
+					<div class="panel panel-default">
+						<div class="panel panel-header">
+							<h5 class="glyphicon glyphicon-fire"> Search Parameters</h5>
+						</div>
+							<div class="panel panel-body">
+							<div class="row">
+          <div class="col-md-9">
+              <div id = "termsbox">
+                <p>Search Terms:</p>
+               <input type="text" name="terms" value="" size="70" >
+              </div>
+              <div id = "NumberofRecords">
+                <p>Number of Records to Retrieve:</p>
+                <input type="text" name="numrecords" value="" size="70" >
+              </div>
+              <div id="StartYear">
+                <p>Start Year (Optional):</p>
+               <input type="text" name="startYear" value="" size="70" >
+              </div>
+              <div id="EndYear">
+                <p>End Year (Optional):</p>
+                <input type="text" name="endYear" value="" size="70" >
+              </div>
+         </div>
+        </div>
+
+
+							<button id="search" class="glyphicon glyphicon-search"> Search</button>
+							<button id="clear" class="glyphicon glyphicon-trash"> Clear Results</button>
+							</div>
+
+						<div class="row">
+          <div class="col-md-9">
+            <p>Search Results:</p>
+              <div id="resultsbox">
+
+              </div>
+         </div>
+        </div>
+
+
+
+
+
+
+
+
+</div>
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
