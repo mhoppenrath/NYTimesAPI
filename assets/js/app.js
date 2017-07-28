@@ -6,8 +6,12 @@ function initialize() {
   ;;
 }
 
-function handleSearch() {
+function clear() {
   $('#resultsbox').empty();
+}
+
+function handleSearch() {
+  clear();
   getInput();
   pullData();
 }
@@ -24,8 +28,8 @@ function pullData() {
     let apiUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
     apiUrl += '?api-key=' + APIKEY + '&';
     apiUrl += 'q=' + searchTerm + '&';
-    apiUrl += startYear ? 'begin_date=' + startYear + '&' : '';
-    apiUrl += endYear ? 'end_date=' + endYear + '&' : '';
+    apiUrl += startYear ? 'begin_date=' + startYear + '0101&' : '';
+    apiUrl += endYear ? 'end_date=' + endYear + '0101&' : '';
     console.log('Url: ' + apiUrl);
     $.ajax(apiUrl).done(function(response) {
       handleResponse(response.response);
@@ -42,6 +46,7 @@ function handleResponse(data) {
     var thisDiv = $('<div/>');
     thisDiv.text((i + 1) + ': ');
     thisDiv.append('<a href="' + data.docs[i].web_url + '">' + data.docs[i].headline.main + '</a><br>');
+    thisDiv.append(data.docs[i].pub_date + '<br>')
     thisDiv.append(data.docs[i].snippet + '<br><br>');
     console.log(thisDiv.text());
     contentDiv.append(thisDiv);
@@ -53,4 +58,5 @@ $(document).ready(function() {
   $('#search').click(function() {
     handleSearch();
   });
+  $('#clear').click(clear);
 });

@@ -1,0 +1,35 @@
+.page-header {
+	background: #000033;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 4px;
+}
+.panel-header {
+	background: #000033;
+	color: white;
+}
+.container {
+	font-family: 'Zilla Slab', serif;
+}
+#NumberofRecords {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+#StartYear {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+#EndYear {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+button {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background: #ecf2f8;
+	margin-left: 10px;
+	border-radius: 5px;
+}
